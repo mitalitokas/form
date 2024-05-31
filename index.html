@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Allergy Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Allergy Form</h1>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="allergies">Do you have any allergies?</label>
+            <div>
+                <input type="radio" id="allergiesYes" name="allergies" value="yes">
+                <label for="allergiesYes">Yes</label>
+
+                <input type="radio" id="allergiesNo" name="allergies" value="no">
+                <label for="allergiesNo">No</label>
+            </div>
+
+            <button type="button" onclick="handleSubmit()">Submit</button>
+        </form>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Allergy Details</h2>
+            <form id="allergyForm">
+                <label for="details">Please describe your allergies:</label>
+                <textarea id="details" name="details" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
